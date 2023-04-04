@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h1>Student Management CRUD</h1>
+
+    <form class=main>
+        <div>
+            <input type="text" name="Name" id="Name" required placeholder="Name" >
+        </div>
+
+        <div>
+            <input type="email" name="Email" id="Email" required  placeholder="Email">
+        </div>
+        <div>
+
+
+
+            <input type="text" name="GPA" id="GPA" required  placeholder="GPA">
+        </div>
+        <div>
+
+            <input type="text" name="Age" id="Age" required placeholder="Age">
+        </div>
+
+        <div class="form-control">
+
+            <input type="text" id="Degree" name="Degree" required placeholder="Degree">
+        </div> <br>
+
+
+        <div class="button">
+            <button type="submit" id="submit" onclick="addStudent()">Add Student</button>
+        </div>
+
+    </form>
+
+    <div class="search-bar">
+        <input class="search" type="text" id="search" onkeyup="searchTable()"
+            placeholder="Search by Name, Email, or Degree">
+
+
+    </div>
+
+    <table class="list table" id="storeList">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>GPA</th>
+                <th>Degree</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
