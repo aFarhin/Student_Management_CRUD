@@ -49,7 +49,6 @@ function readFormData() {
     formData["Age"] = age.value;
     formData["Degree"] = degree.value;
 
-    id++;
     return formData;
 }
 
@@ -64,7 +63,7 @@ function insertNewRecord(data) {
     var newRow = table.insertRow(table.length);
 
     cell1 = newRow.insertCell(0);
-    // id++;
+    id++;
     cell1.innerHTML = id;
 
     cell2 = newRow.insertCell(1);
@@ -112,6 +111,8 @@ function onEdit(td) {
     document.getElementById("Degree").value = selectedRow.cells[5].innerHTML;
     document.getElementById('submit').innerText = 'Edit Student';
 
+// Set the id value to the current value in the first cell of the selected row
+     id = parseInt(selectedRow.cells[0].innerHTML);
 }
 
 function updateStudentRecord() {
